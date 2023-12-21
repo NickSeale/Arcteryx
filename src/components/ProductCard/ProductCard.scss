@@ -1,0 +1,32 @@
+.cards {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  max-width: fit-content;
+  height: 30%;
+}
+.card {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0.5rem;
+
+  &__image {
+    width: 25rem;
+    height: 35rem;
+    background-color: lightgray;
+  }
+  &__title{
+    font-weight: 600;
+    font-size:1.5rem;
+  }
+  &__price{
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  &__button{
+    width:90%;
+    background-color: black;
+    color:white;
+  }
+}

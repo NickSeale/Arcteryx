@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ProductsHeader from "../../components/ProductsHeader/ProductsHeader"
+import ProductCard from "../../components/ProductCard/ProductCard";
+import products from "../../data/store.json"
 
 function Products({ trip }) {
   const WEATHER_API_KEY = "ca56233859af128469af10b8ebed7ea0";
@@ -25,9 +28,36 @@ function Products({ trip }) {
   useEffect(() => {
     handlePageLoad();
   }, []);
+  
+const [findUpperBody, setFindUpperBody]=useState([])
+const [findLowerBody, setFindLowerBody]=useState([])
+const [findAccessorires, setFindAccessories] = useState([])
+  
 
+  const handleUpperBodyClick = ()=> {
+    // console.log('Clicked upper')
+      const lookingUpper = products.filter((product)=> product.subcategory =="shirts & tops" || product.subcategory=="fleece" || product.subcategory=="shells")
+        console.log(lookingUpper)
+        setFindUpperBody(lookingUpper)
+    };
+    
+    const handleLowerBodyClick = ()=> {
+      // console.log('Clicked Lower')
+        const lookingLower = products.filter((product)=> product.subcategory =="pants" || product.subcategory=="shorts" || product.category =="footware")
+          console.log("pants", lookingLower)
+          setFindLowerBody(lookingLower)
+      };
+ 
+      const handleAccessoriesClick =()=> {
+        // console.log("accessories clickd",)
+        const lookingAcc = products.filter((product)=> product.category=="accessories")
+        console.log(lookingAcc)
+        setFindAccessories(lookingAcc)
+      }
+  
   return (
     <>
+    <ProductsHeader handleUpperBodyClick={handleUpperBodyClick} handleLowerBodyClick={handleLowerBodyClick} handleAccessoriesClick={handleAccessoriesClick}/>
       {weatherData && (
         <div>
           <h1>I am the products page</h1>
@@ -36,6 +66,9 @@ function Products({ trip }) {
           <p>Current Temp is {weatherData[0].main.temp}</p>
         </div>
       )}
+      <ProductCard findUpperBody={findUpperBody} findLowerBody={findLowerBody} findAccessorires={findAccessorires} productsArray= {products}/>
+
+      
     </>
   );
 }
