@@ -90,7 +90,7 @@ function Trip({ handleTripChange }) {
           defaultValue={"Unselected"}
         >
           <option value="Unselected" disabled>
-            {"Select an Activity"}
+            {"Select an Activity | "}
           </option>
           <option value="Skiing">Skiing</option>
           <option value="Climbing">Rock Climbing</option>
