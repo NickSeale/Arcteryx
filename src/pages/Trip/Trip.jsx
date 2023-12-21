@@ -16,6 +16,7 @@ function Trip({ handleTripChange }) {
   const makeUrl = (inputCity) => {
     return `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=50000&namePrefix=${inputCity}`;
   };
+  document.body.style = "background: #3d3d3d;";
 
   const loadOptions = async (inputCity) => {
     try {
@@ -89,7 +90,7 @@ function Trip({ handleTripChange }) {
           defaultValue={"Unselected"}
         >
           <option value="Unselected" disabled>
-            {"Select an Activity"}
+            {"Select an Activity | "}
           </option>
           <option value="Skiing">Skiing</option>
           <option value="Climbing">Rock Climbing</option>
