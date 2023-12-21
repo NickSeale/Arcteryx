@@ -1,0 +1,88 @@
+[
+  {
+    "category": "clothing",
+    "subcategory": "insulated jackets",
+    "item": "sentinel insulated jacket",
+    "specs": ["waterproof", "windproof", "breathable"],
+    "model": "x000007213",
+    "activities": [
+      "Big Mountain Skiing",
+      "Backcountry Skiing",
+      "Freeride & Touring",
+      "Skiing",
+      "Snowboarding"
+    ],
+    "gender": "women",
+    "temperature": 4,
+    "image": "public/F23-X000007213-Sentinel-Insulated-Jacket-Hazelnut-Women-s-Front-View.jpg"
+  },
+  {
+    "category": "clothing",
+    "subcategory": "pants",
+    "item": "snetinel bib pants women's",
+    "specs": ["waterproof", "windproof", "breathable"],
+    "model": "x000007269",
+    "activities": [
+      "Big Mountain Skiing",
+      "Backcountry Skiing",
+      "Freeride & Touring",
+      "Skiing",
+      "Snowboarding"
+    ],
+    "gender": "women",
+    "temperature": 4,
+    "image": "public/Sentinel-Bib-Pant-W-Yukon.jpg"
+  },
+  {
+    "category": "accessories",
+    "subcategory": "hats & caps",
+    "item": "wool ball cap",
+    "specs": [],
+    "model": "x000005504",
+    "activities": ["Around Town"],
+    "gender": "",
+    "temperature":null,
+    "image": "public/F23-X000005504-Wool-Ball-Cap-Pytheas-Heather-Front.jpg"
+  },
+  {
+    "category": "clothing",
+    "subcategory": "base layer",
+    "item": "hallam merino wool crew neck",
+    "specs": ["natural fibers"],
+    "model": "x000007876",
+    "activities": [
+      "Big Mountain Skiing",
+      "Backcountry Skiing",
+      "Freeride & Touring",
+      "Skiing",
+      "Snowboarding",
+      "Ice Climbing",
+      "Alpine Climbing"
+    ],
+    "gender": "neutral",
+    "temperature": 4,
+    "image": "public/F23-X000007876-Hallam-Merino-Wool-Crew-Neck-Shirt-LS-Smoke-Bluff-Women-s.jpg"
+  },
+  {
+    "category": "clothing",
+    "subcategory": "shorts",
+    "item": "gamma quick dry shorts 9\"",
+    "specs": ["quick dry", "wind resistant"],
+    "model": "x000007186",
+    "activities": ["All Around"],
+    "gender": "mens",
+    "temperature": 15,
+    "image": "public/assets/Gamma-Quick-Dry-Short-9.jpeg"
+  },
+  {
+    "category": "footware",
+    "subcategory": "boots",
+    "item": "aerios nivalis gtx shoe",
+    "specs": ["waterproof", "windproof", "breathable"],
+    "model": "x000007186",
+    "activities": ["hiking", "trekking", "playing in the snow"],
+    "gender": "mens",
+    "temperature": 0,
+    "image": "public/assets/AERIOS-NIVALIS-GTX-Black-Black.jpg"
+  }
+]
