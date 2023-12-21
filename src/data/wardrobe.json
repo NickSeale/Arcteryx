@@ -41,7 +41,7 @@
     "model": "x000005504",
     "activities": ["Around Town"],
     "gender": "",
-    "temperature":null,
+    "temperature":true,
     "image": "public/F23-X000005504-Wool-Ball-Cap-Pytheas-Heather-Front.jpg"
   },
   {

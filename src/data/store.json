@@ -13,7 +13,7 @@
       "around town"
     ],
     "gender": "neutral",
-    "temperature": null,
+    "temperature": true,
     "image": "public/assets/Mantis-20-Backpack-Black-Sapphire.jpg",
     "price": 160
   },
@@ -31,7 +31,7 @@
       "Snowboarding"
     ],
     "gender": "neutral",
-    "temperature": "4",
+    "temperature": 4,
     "image": "public/assets/Merino-Wool-Ski-Sock-Black.jpg",
     "price": 34
   },
@@ -67,7 +67,7 @@
     "model": " X000006523",
     "activities": ["around town"],
     "gender": "mens",
-    "temperature": null,
+    "temperature": true,
     "image": "public/assets/Captive-Split-T-Shirt-Black.jpg",
     "price": 80
   },
@@ -79,7 +79,7 @@
     "model": "X000006343",
     "activities": ["rock climbing", "ice climbing", "alpine climbing"],
     "gender": "mens",
-    "temperature": "every been ",
+    "temperature": true,
     "image": "public/assets/Gamma-MX-Jacket-Black-Sapphire.jpg",
     "price": 400
   },
@@ -139,7 +139,7 @@
     "model":  "XH00002058",
     "activities": ["product care"],
     "gender": "neutral",
-    "temperature": null,
+    "temperature": true,
     "image": "public/assets/NU-Technical-Detergent-(Canada).jpg",
     "price": 18
   },
@@ -151,7 +151,7 @@
     "model": "X000005263",
     "activities": ["rock climbing", "ice climbing", "alpine climbing", "indoor climbing"],
     "gender": "womens",
-    "temperature": "",
+    "temperature": true,
     "image": "public/assets/AR-385a-Harness-W-Velvet-Sand.jpg",
     "price": 200
   },
@@ -163,7 +163,7 @@
     "model": "X000007013",
     "activities": ["rock climbing", "alpine climbing", "indoor climbing"],
     "gender": "neutral",
-    "temperature":null,
+    "temperature":true,
     "image": "public/assets/Ion-Chalk-Bag-Small-Black.jpg",
     "price": 45
   },

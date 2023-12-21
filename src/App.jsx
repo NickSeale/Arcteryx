@@ -25,6 +25,7 @@ function App() {
           }
         />
         <Route path="/products" element={<Products trip={trip} />} />
+        <Route path="/plan" element={<Plan/>}/>
       </Routes>
     </BrowserRouter>
   );
