@@ -6,7 +6,7 @@ import axios from "axios";
 import { AsyncPaginate } from "react-select-async-paginate";
 import { useState } from "react";
 
-function Trip() {
+function Trip({ handleTripChange }) {
   const navigate = useNavigate();
   const handleHeadingBackClick = () => {
     navigate("/");
@@ -27,8 +27,12 @@ function Trip() {
       return {
         options: response.data.data.map((city) => {
           return {
-            value: `${city.latitude} ${city.longitude}`,
-            label: `${city.name}, ${city.countryCode}`,
+            // value: `${city.latitude} ${city.longitude}`,
+            lat: city.latitude,
+            lon: city.longitude,
+            label: `${city.name}${
+              city.regionCode ? `, ${city.regionCode}` : ""
+            }, ${city.countryCode}`,
           };
         }),
       };
@@ -46,8 +50,9 @@ function Trip() {
       dateTo: e.target.to.value,
     };
     // console.log(geoApiOptions);
-
+    handleTripChange(newActivity);
     console.log(newActivity);
+    navigate("/products");
   };
 
   const handleDestinationChange = (searchData) => {
