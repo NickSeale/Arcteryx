@@ -1,3 +1,7 @@
+#root {
+  //
+}
+
 .trip {
   height: 100vh;
   padding: 10px;
@@ -6,6 +10,9 @@
   background-size: 140%;
   background-position: 80% 20%;
   background-image: url(../../assets/background-images/mountain-4.jpg);
+  animation-name: popin3;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 
   &__title {
     color: rgba(255, 255, 255, 0.3);
@@ -14,18 +21,24 @@
     top: 5%;
     // left: 40%;
     font-size: 80px;
+    animation-name: popin;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
   }
   &__container {
     position: absolute;
     display: flex;
     padding: 20px;
     background-color: rgb(100, 100, 100);
-    border: 1px solid rgb(100, 100, 100);
-    box-shadow: 0 0 1px 1px rgb(110, 110, 110);
+    border: 1px solid rgb(90, 90, 90);
+    // box-shadow: 0 0 1px 1px rgb(110, 110, 110);
     top: 60%;
     left: 40%;
     transform: translate(-40%, 0);
     border-radius: 10px;
+    animation-name: popin2;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
   }
 
   &__paginate {
@@ -54,10 +67,45 @@
   }
 }
 
+@keyframes popin {
+  0% {
+    transform: translateY(30%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes popin2 {
+  0% {
+    transform: translate(-40%, 30%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(-40%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes popin3 {
+  0% {
+    transform: translateY(10%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 .heading {
   &__button {
     text-decoration: none;
     color: white;
+    animation-name: popin;
+    animation-duration: 1s;
     &:hover {
       opacity: 0.8;
       //   text-decoration: underline;

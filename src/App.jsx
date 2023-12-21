@@ -13,6 +13,7 @@ function App() {
     setTrip(input);
     console.log(trip);
   };
+  document.body.style = "background: #ffffff;";
 
   return (
     <BrowserRouter>

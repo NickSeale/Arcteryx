@@ -16,6 +16,7 @@ function Trip({ handleTripChange }) {
   const makeUrl = (inputCity) => {
     return `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=50000&namePrefix=${inputCity}`;
   };
+  document.body.style = "background: #3d3d3d;";
 
   const loadOptions = async (inputCity) => {
     try {
