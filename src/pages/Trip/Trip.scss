@@ -22,22 +22,34 @@
     background-color: rgb(100, 100, 100);
     border: 1px solid rgb(100, 100, 100);
     box-shadow: 0 0 1px 1px rgb(110, 110, 110);
-    top: 80%;
+    top: 60%;
     left: 40%;
     transform: translate(-40%, 0);
     border-radius: 10px;
   }
+
+  &__paginate {
+    width: 300px;
+  }
   &__option {
     margin-left: 20px;
     &--submit {
-      height: 25px;
+      height: 38px;
       width: 50px;
       margin-left: 20px;
       background-image: url("https://images-dynamic-arcteryx.imgix.net/foundation-ui/svgs/Search.svg");
-      padding: 4px;
+      //   padding: 4px;
       background-repeat: no-repeat;
       background-position: 50%;
       background-size: 30%;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+        // box-shadow: 0 0 1px 1px rgb(155, 155, 155);
+        scale: 1.03;
+      }
     }
   }
 }

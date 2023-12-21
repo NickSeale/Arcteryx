@@ -3,26 +3,39 @@ import "../../styles/_global.scss";
 import { useNavigate } from "react-router-dom";
 import { geoApiOptions } from "../../utils/getAPI";
 import axios from "axios";
+import { AsyncPaginate } from "react-select-async-paginate";
+import { useState } from "react";
 
-function Trip() {
+function Trip({ handleTripChange }) {
   const navigate = useNavigate();
   const handleHeadingBackClick = () => {
     navigate("/");
   };
+  const [search, setSearch] = useState(null);
 
   const makeUrl = (inputCity) => {
     return `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=50000&namePrefix=${inputCity}`;
   };
 
-  const getCities = async (inputCity) => {
+  const loadOptions = async (inputCity) => {
     try {
       const response = await axios.request({
         ...geoApiOptions,
         url: makeUrl(inputCity),
       });
-      //   console.log(response.data);
-
-      console.log(response.data.data[0]);
+      //   console.log(response.data.data);
+      return {
+        options: response.data.data.map((city) => {
+          return {
+            // value: `${city.latitude} ${city.longitude}`,
+            lat: city.latitude,
+            lon: city.longitude,
+            label: `${city.name}${
+              city.regionCode ? `, ${city.regionCode}` : ""
+            }, ${city.countryCode}`,
+          };
+        }),
+      };
     } catch (error) {
       console.error(error);
     }
@@ -31,14 +44,19 @@ function Trip() {
   const handleTripSubmit = (e) => {
     e.preventDefault();
     const newActivity = {
-      destination: e.target.destination.value,
+      destination: search,
       activity: e.target.activity.value,
       dateFrom: e.target.from.value,
       dateTo: e.target.to.value,
     };
     // console.log(geoApiOptions);
-    getCities(e.target.destination.value);
-    // console.log(newActivity);
+    handleTripChange(newActivity);
+    console.log(newActivity);
+    navigate("/products");
+  };
+
+  const handleDestinationChange = (searchData) => {
+    setSearch(searchData);
   };
 
   return (
@@ -50,11 +68,19 @@ function Trip() {
       </div>
       <h1 className="trip__title">SELECT YOUR ADVENTURE</h1>
       <form className="trip__container" onSubmit={(e) => handleTripSubmit(e)}>
-        <input
+        {/* <input
           className="trip__option"
           type="text"
           placeholder="Enter a Destination"
           id="destination"
+        /> */}
+        <AsyncPaginate
+          className="trip__paginate"
+          placeholder="Enter your Destination"
+          debounceTimeout={600}
+          value={search}
+          onChange={handleDestinationChange}
+          loadOptions={loadOptions}
         />
         <select
           className="trip__option"
