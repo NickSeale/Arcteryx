@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Weather from "../../components/Weather/Weather";
 
 function Products({ trip }) {
   const WEATHER_API_KEY = "ca56233859af128469af10b8ebed7ea0";
@@ -29,12 +30,18 @@ function Products({ trip }) {
   return (
     <>
       {weatherData && (
-        <div>
-          <h1>I am the products page</h1>
-          <p>Your trip is {trip.destination.label}</p>
-          <p>{weatherData[0].dt_txt}</p>
-          <p>Current Temp is {weatherData[0].main.temp}</p>
-        </div>
+        <>
+          <Weather
+            weatherData={weatherData}
+            location={trip.destination.label}
+          />
+          <div>
+            <h1>I am the products page</h1>
+            <p>Your trip is {trip.destination.label}</p>
+            <p>{weatherData[0].dt_txt}</p>
+            <p>Current Temp is {weatherData[0].main.temp}</p>
+          </div>
+        </>
       )}
     </>
   );
