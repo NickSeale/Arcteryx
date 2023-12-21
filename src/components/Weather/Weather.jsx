@@ -1,6 +1,5 @@
 import "./Weather.scss";
 import "../../styles/_global.scss";
-import { useEffect } from "react";
 
 function Weather({ weatherData, location }) {
   const days = [
