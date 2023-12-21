@@ -1,0 +1,27 @@
+.navbar {
+  background-color: black;
+  color: white;
+  padding: 8px 0;
+  &__content {
+    padding-left: 85px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+  }
+  &__divider {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  &__text {
+    padding: 2px;
+    font-size: 12px;
+    &--active {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+  }
+}
