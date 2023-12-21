@@ -2,6 +2,7 @@ import "./NavBar.scss";
 import "../../styles/_global.scss";
 
 function NavBar() {
+  document.body.style = "background: #ffffff;";
   return (
     <div className="navbar">
       <section className="navbar__content">

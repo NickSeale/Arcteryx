@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Weather from "../../components/Weather/Weather";
 import ProductsHeader from "../../components/ProductsHeader/ProductsHeader"
 import ProductCard from "../../components/ProductCard/ProductCard";
 import products from "../../data/store.json"
@@ -59,12 +60,18 @@ const [findAccessorires, setFindAccessories] = useState([])
     <>
     <ProductsHeader handleUpperBodyClick={handleUpperBodyClick} handleLowerBodyClick={handleLowerBodyClick} handleAccessoriesClick={handleAccessoriesClick}/>
       {weatherData && (
-        <div>
-          <h1>I am the products page</h1>
-          <p>Your trip is {trip.destination.label}</p>
-          <p>{weatherData[0].dt_txt}</p>
-          <p>Current Temp is {weatherData[0].main.temp}</p>
-        </div>
+        <>
+          <Weather
+            weatherData={weatherData}
+            location={trip.destination.label}
+          />
+          <div>
+            <h1>I am the products page</h1>
+            <p>Your trip is {trip.destination.label}</p>
+            <p>{weatherData[0].dt_txt}</p>
+            <p>Current Temp is {weatherData[0].main.temp}</p>
+          </div>
+        </>
       )}
       <ProductCard findUpperBody={findUpperBody} findLowerBody={findLowerBody} findAccessorires={findAccessorires} productsArray= {products}/>
 
