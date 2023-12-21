@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Header() {
   const navigate = useNavigate();
   const handleOnTripClick = () => {
-    navigate("/plan");
+    navigate("/trip");
   };
 
   return (

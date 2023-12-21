@@ -1,0 +1,55 @@
+.trip {
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  background-size: cover;
+  background-size: 140%;
+  background-position: 80% 20%;
+  background-image: url(../../assets/background-images/mountain-4.jpg);
+
+  &__title {
+    color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    cursor: default;
+    top: 5%;
+    // left: 40%;
+    font-size: 80px;
+  }
+  &__container {
+    position: absolute;
+    display: flex;
+    padding: 20px;
+    background-color: rgb(100, 100, 100);
+    border: 1px solid rgb(100, 100, 100);
+    box-shadow: 0 0 1px 1px rgb(110, 110, 110);
+    top: 80%;
+    left: 40%;
+    transform: translate(-40%, 0);
+    border-radius: 10px;
+  }
+  &__option {
+    margin-left: 20px;
+    &--submit {
+      height: 25px;
+      width: 50px;
+      margin-left: 20px;
+      background-image: url("https://images-dynamic-arcteryx.imgix.net/foundation-ui/svgs/Search.svg");
+      padding: 4px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 30%;
+    }
+  }
+}
+
+.heading {
+  &__button {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      opacity: 0.8;
+      //   text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
