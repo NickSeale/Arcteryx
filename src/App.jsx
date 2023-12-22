@@ -11,7 +11,7 @@ function App() {
 
   const handleTripChange = (input) => {
     setTrip(input);
-    console.log(trip);
+    // console.log(trip);
   };
   document.body.style = "background: #ffffff;";
 
@@ -26,6 +26,7 @@ function App() {
           }
         />
         <Route path="/products" element={<Products trip={trip} />} />
+        {/* <Route path="/plan" element={<Plan/>}/> */}
       </Routes>
     </BrowserRouter>
   );

@@ -21,14 +21,14 @@ function Weather({ weatherData, location }) {
   const date4 = date4_epoch.getDay();
   const date5_epoch = new Date(weatherData[32].dt * 1000);
   const date5 = date5_epoch.getDay();
-  console.log(
-    weatherData[0].dt,
-    weatherData[8].dt,
-    weatherData[16].dt,
-    weatherData[24].dt,
-    weatherData[32].dt
-  );
-  console.log(date1, date2, date3, date4, date5);
+  // console.log(
+  //   weatherData[0].dt,
+  //   weatherData[8].dt,
+  //   weatherData[16].dt,
+  //   weatherData[24].dt,
+  //   weatherData[32].dt
+  // );
+  // console.log(date1, date2, date3, date4, date5);
 
   const tempMin = [];
   const tempMax = [];
@@ -54,8 +54,6 @@ function Weather({ weatherData, location }) {
   };
 
   getWeatherData();
-  console.log(tempMin);
-  console.log(tempMax);
 
   return (
     <div className="weather">

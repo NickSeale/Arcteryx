@@ -50,9 +50,7 @@ function Trip({ handleTripChange }) {
       dateFrom: e.target.from.value,
       dateTo: e.target.to.value,
     };
-    // console.log(geoApiOptions);
     handleTripChange(newActivity);
-    console.log(newActivity);
     navigate("/products");
   };
 

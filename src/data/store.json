@@ -13,8 +13,8 @@
       "around town"
     ],
     "gender": "neutral",
-    "temperature": null,
-    "image": "public/assets/Mantis-20-Backpack-Black-Sapphire.jpg",
+    "temperature": true,
+    "image": "/assets/Mantis-20-Backpack-Black-Sapphire.jpg",
     "price": 160
   },
   {
@@ -31,20 +31,29 @@
       "Snowboarding"
     ],
     "gender": "neutral",
-    "temperature": "4",
-    "image": "public/assets/Merino-Wool-Ski-Sock-Black.jpg",
+    "temperature": 4,
+    "image": "/assets/Merino-Wool-Ski-Sock-Black.jpg",
     "price": 34
   },
   {
     "category": "accessories",
     "subcategory": "gloves",
     "item": "rope gloves",
-    "specs": ["goat leather", "clippable loop", "touch screen thumb & index finger"],
+    "specs": [
+      "goat leather",
+      "clippable loop",
+      "touch screen thumb & index finger"
+    ],
     "model": "X000006504",
-    "activities": ["Moutain Rescue", "Skiing", "snowboarding", "Search & Rescue"],
+    "activities": [
+      "Moutain Rescue",
+      "Skiing",
+      "snowboarding",
+      "Search & Rescue"
+    ],
     "gender": "neutral",
-    "temperature":4,
-    "image": "public/assets/Rope-Glove-Black.jpg",
+    "temperature": 4,
+    "image": "/assets/Rope-Glove-Black.jpg",
     "price": 125
   },
   {
@@ -56,7 +65,7 @@
     "activities": ["hking", "trekking", "Running"],
     "gender": "mens",
     "temperature": 4,
-    "image": "public/assets/Ionia-Merino-Wool-Hoody-Cloud.jpg",
+    "image": "/assets/Ionia-Merino-Wool-Hoody-Cloud.jpg",
     "price": 150
   },
   {
@@ -64,11 +73,11 @@
     "subcategory": "shirts & tops",
     "item": "captive split t-shirt men's",
     "specs": ["organix cotton", "breathable"],
-    "model": " X000006523",
+    "model": "X000006523",
     "activities": ["around town"],
     "gender": "mens",
-    "temperature": null,
-    "image": "public/assets/Captive-Split-T-Shirt-Black.jpg",
+    "temperature": true,
+    "image": "/assets/Captive-Split-T-Shirt-Black.jpg",
     "price": 80
   },
   {
@@ -79,20 +88,20 @@
     "model": "X000006343",
     "activities": ["rock climbing", "ice climbing", "alpine climbing"],
     "gender": "mens",
-    "temperature": "every been ",
-    "image": "public/assets/Gamma-MX-Jacket-Black-Sapphire.jpg",
+    "temperature": true,
+    "image": "/assets/Gamma-MX-Jacket-Black-Sapphire.jpg",
     "price": 400
   },
   {
     "category": "clothing",
     "subcategory": "fleece",
     "item": "covert hoody men's",
-    "specs": ["recycled polyester","laminated pockets"],
+    "specs": ["recycled polyester", "laminated pockets"],
     "model": "X000005555",
     "activities": ["hiking", "trekking", "around town"],
     "gender": "mens",
     "temperature": 4,
-    "image": "public/assets/Covert-Hoody-Arctic-Silk-Heather.jpg",
+    "image": "/assets/Covert-Hoody-Arctic-Silk-Heather.jpg",
     "price": 220
   },
   {
@@ -101,10 +110,16 @@
     "item": "essent high-rise shorts 8\" women's",
     "specs": ["strech", "nylon"],
     "model": "X000007327",
-    "activities": ["hiking", "trekking", "rock climbing", "alpine climbing", "around town"],
+    "activities": [
+      "hiking",
+      "trekking",
+      "rock climbing",
+      "alpine climbing",
+      "around town"
+    ],
     "gender": "womens",
     "temperature": 10,
-    "image": "public/assets/Essent-High-Rise-Short-8-W-Forage.jpg",
+    "image": "/assets/Essent-High-Rise-Short-8-W-Forage.jpg",
     "price": 80
   },
   {
@@ -116,7 +131,7 @@
     "activities": ["Running", "training", "fitness"],
     "gender": "womens",
     "temperature": 4,
-    "image": "public/assets/Norvan-SL-3-Shoe-W-Black-Light-Fallow.jpg",
+    "image": "/assets/Norvan-SL-3-Shoe-W-Black-Light-Fallow.jpg",
     "price": 180
   },
   {
@@ -125,10 +140,10 @@
     "item": "word toque",
     "specs": ["recycled polyester"],
     "model": "X000005254",
-    "activities": ["around town","skiing", "snowboarding"],
+    "activities": ["around town", "skiing", "snowboarding"],
     "gender": "neutral",
     "temperature": 4,
-    "image": "public/assets/Word-Toque-Black.jpg",
+    "image": "/assets/Word-Toque-Black.jpg",
     "price": 45
   },
   {
@@ -136,11 +151,11 @@
     "subcategory": "product care",
     "item": "nu technical detergent",
     "specs": ["fleece", "softshell", "vegan"],
-    "model":  "XH00002058",
+    "model": "XH00002058",
     "activities": ["product care"],
     "gender": "neutral",
-    "temperature": null,
-    "image": "public/assets/NU-Technical-Detergent-(Canada).jpg",
+    "temperature": true,
+    "image": "/assets/NU-Technical-Detergent-(Canada).jpg",
     "price": 18
   },
   {
@@ -149,10 +164,15 @@
     "item": "ar-385a harness women's",
     "specs": ["lightweight", "durable"],
     "model": "X000005263",
-    "activities": ["rock climbing", "ice climbing", "alpine climbing", "indoor climbing"],
+    "activities": [
+      "rock climbing",
+      "ice climbing",
+      "alpine climbing",
+      "indoor climbing"
+    ],
     "gender": "womens",
-    "temperature": "",
-    "image": "public/assets/AR-385a-Harness-W-Velvet-Sand.jpg",
+    "temperature": true,
+    "image": "/assets/AR-385a-Harness-W-Velvet-Sand.jpg",
     "price": 200
   },
   {
@@ -163,8 +183,8 @@
     "model": "X000007013",
     "activities": ["rock climbing", "alpine climbing", "indoor climbing"],
     "gender": "neutral",
-    "temperature":null,
-    "image": "public/assets/Ion-Chalk-Bag-Small-Black.jpg",
+    "temperature": true,
+    "image": "/assets/Ion-Chalk-Bag-Small-Black.jpg",
     "price": 45
   },
   {
@@ -173,81 +193,22 @@
     "item": "rho merino wool bottom women's",
     "specs": ["lightweight"],
     "model": " X000006304",
-    "activities": ["all around","around town"],
+    "activities": ["all around", "around town"],
     "gender": "womens",
     "temperature": 4,
-    "image": "public/assets/Rho-Merino-Wool-Bottom-W-Yukon.jpg",
+    "image": "/assets/Rho-Merino-Wool-Bottom-W-Yukon.jpg",
     "price": 120
   },
   {
     "category": "clothing",
     "subcategory": "toques & beanies",
+    "item": "Grotto headband",
     "specs": ["recycled polyester"],
     "model": "X000007428",
-    "activities": ["around town", "skiing","snowboarding"],
+    "activities": ["around town", "skiing", "snowboarding"],
     "gender": "neutral",
     "temperature": 4,
-    "image": "public/assets/Grotto-Headband-Warm-Stone-Artic-Silk.jpg",
+    "image": "/assets/Grotto-Headband-Warm-Stone-Artic-Silk.jpg",
     "price": 50
-  },
-  {
-    "category": "",
-    "subcategory": "",
-    "item": "",
-    "specs": [],
-    "model": "",
-    "activities": [],
-    "gender": "",
-    "temperature": "",
-    "image": "",
-    "price": ""
-  },
-  {
-    "category": "",
-    "subcategory": "",
-    "item": "",
-    "specs": [],
-    "model": "",
-    "activities": [],
-    "gender": "",
-    "temperature": "",
-    "image": "",
-    "price": ""
-  },
-  {
-    "category": "",
-    "subcategory": "",
-    "item": "",
-    "specs": [],
-    "model": "",
-    "activities": [],
-    "gender": "",
-    "temperature": "",
-    "image": "",
-    "price": ""
-  },
-  {
-    "category": "",
-    "subcategory": "",
-    "item": "",
-    "specs": [],
-    "model": "",
-    "activities": [],
-    "gender": "",
-    "temperature": "",
-    "image": "",
-    "price": ""
-  },
-  {
-    "category": "",
-    "subcategory": "",
-    "item": "",
-    "specs": [],
-    "model": "",
-    "activities": [],
-    "gender": "",
-    "temperature": "",
-    "image": "",
-    "price": ""
   }
 ]
