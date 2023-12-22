@@ -11,7 +11,7 @@ function App() {
 
   const handleTripChange = (input) => {
     setTrip(input);
-    console.log(trip);
+    // console.log(trip);
   };
   document.body.style = "background: #ffffff;";
 

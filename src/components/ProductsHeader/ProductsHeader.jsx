@@ -1,9 +1,10 @@
-
-
-function ProductsHeader ({handleUpperBodyClick, handleLowerBodyClick, handleAccessoriesClick}){
-
-    return (
-        <div className="header">
+function ProductsHeader({
+  handleUpperBodyClick,
+  handleLowerBodyClick,
+  handleAccessoriesClick,
+}) {
+  return (
+    <div className="header">
       <section className="header__content">
         <section className="header__img">
           <svg
@@ -88,14 +89,24 @@ function ProductsHeader ({handleUpperBodyClick, handleLowerBodyClick, handleAcce
           </svg>
         </section>
         <section className="header__options">
-          <h4 className="header__text" onClick={handleUpperBodyClick}>UPPER BODY</h4>
-          <h4 className="header__text" onClick= {handleLowerBodyClick}>LOWER BODY</h4>
-          <h4 className="header__text" onClick={handleAccessoriesClick}>ACCESSORIES</h4>
+          <h4 className="header__text" onClick={(e) => handleUpperBodyClick(e)}>
+            UPPER BODY
+          </h4>
+          <h4 className="header__text" onClick={(e) => handleLowerBodyClick(e)}>
+            LOWER BODY
+          </h4>
+          <h4
+            className="header__text"
+            onClick={(e) => handleAccessoriesClick(e)}
+          >
+            ACCESSORIES
+          </h4>
           {/* <h4 className="header__text">FOOTWARE</h4> */}
           {/* <h4 className="header__text">PACKS</h4> */}
-          <h4 
-        //   onClick={handleOnTripClick} 
-          className="header__text">
+          <h4
+            //   onClick={handleOnTripClick}
+            className="header__text"
+          >
             PLAN YOUR TRIP
           </h4>
         </section>
@@ -124,7 +135,7 @@ function ProductsHeader ({handleUpperBodyClick, handleLowerBodyClick, handleAcce
         </section>
       </section>
     </div>
-    )
+  );
 }
 
 export default ProductsHeader;

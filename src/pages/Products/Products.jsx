@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Weather from "../../components/Weather/Weather";
-import ProductsHeader from "../../components/ProductsHeader/ProductsHeader"
+import ProductsHeader from "../../components/ProductsHeader/ProductsHeader";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import products from "../../data/store.json"
+import products from "../../data/store.json";
 
 function Products({ trip }) {
   const WEATHER_API_KEY = "ca56233859af128469af10b8ebed7ea0";
@@ -12,70 +12,72 @@ function Products({ trip }) {
     "api.openweathermap.org/data/2.5/forecast?lat=24.2&lon=27.4&appid=ca56233859af128469af10b8ebed7ea0";
 
   const [weatherData, setWeatherData] = useState(null);
-  // `${WEATHER_BASE_URL}?lat=${trip.destination.lat}&lon=${trip.destination.lon}&appid=${WEATHER_API_KEY}`
 
   const handlePageLoad = async () => {
     try {
       const response = await axios.get(
         `${WEATHER_BASE_URL}?lat=${trip.destination.lat}&lon=${trip.destination.lon}&appid=${WEATHER_API_KEY}&units=metric`
       );
-      console.log(response.data.list);
       setWeatherData(response.data.list);
     } catch (error) {
       console.log(error);
     }
   };
 
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
   useEffect(() => {
     handlePageLoad();
+    setFilteredProducts(products);
   }, []);
-  
-const [findUpperBody, setFindUpperBody]=useState([]);
-const [findLowerBody, setFindLowerBody]=useState([]);
-const [findAccessories, setFindAccessories] = useState([]);
-  
 
-  const handleUpperBodyClick = ()=> {
-    // console.log('Clicked upper')
-      const lookingUpper = products.filter((product)=> product.subcategory =="shirts & tops" || product.subcategory=="fleece" || product.subcategory=="shells")
-        console.log(lookingUpper)
-        setFindUpperBody(lookingUpper)
-    };
-    
-    const handleLowerBodyClick = ()=> {
-      // console.log('Clicked Lower')
-        const lookingLower = products.filter((product)=> product.subcategory =="pants" || product.subcategory=="shorts" || product.category =="footware");
-          console.log("pants", lookingLower)
-          setFindLowerBody(lookingLower)
-      };
- 
-      const handleAccessoriesClick =()=> {
-        // console.log("accessories clickd",)
-        const lookingAcc = products.filter((product)=> product.category=="accessories");
-        console.log(lookingAcc)
-        setFindAccessories(lookingAcc)
-      }
-  
+  const handleUpperBodyClick = (e) => {
+    e.preventDefault();
+    const lookingUpper = products.filter(
+      (product) =>
+        product.subcategory == "shirts & tops" ||
+        product.subcategory == "fleece" ||
+        product.subcategory == "shells"
+    );
+    setFilteredProducts(lookingUpper);
+  };
+
+  const handleLowerBodyClick = (e) => {
+    e.preventDefault();
+    const lookingLower = products.filter(
+      (product) =>
+        product.subcategory == "pants" ||
+        product.subcategory == "shorts" ||
+        product.category == "footware"
+    );
+    setFilteredProducts(lookingLower);
+  };
+
+  const handleAccessoriesClick = (e) => {
+    e.preventDefault();
+    const lookingAcc = products.filter(
+      (product) => product.category == "accessories"
+    );
+    setFilteredProducts(lookingAcc);
+  };
+
   return (
     <>
-    <ProductsHeader handleUpperBodyClick={handleUpperBodyClick} handleLowerBodyClick={handleLowerBodyClick} handleAccessoriesClick={handleAccessoriesClick}/>
       {weatherData && (
         <>
           <Weather
             weatherData={weatherData}
             location={trip.destination.label}
           />
-          <div>
-            <h1>I am the products page</h1>
-            <p>Your trip is {trip.destination.label}</p>
-            <p>{weatherData[0].dt_txt}</p>
-            <p>Current Temp is {weatherData[0].main.temp}</p>
-          </div>
         </>
       )}
-      <ProductCard findUpperBody={findUpperBody} findLowerBody={findLowerBody} findAccessories={findAccessories} productsArray= {products}/>
+      <ProductsHeader
+        handleUpperBodyClick={(e) => handleUpperBodyClick(e)}
+        handleLowerBodyClick={(e) => handleLowerBodyClick(e)}
+        handleAccessoriesClick={(e) => handleAccessoriesClick(e)}
+      />
 
-      
+      <ProductCard filteredProducts={filteredProducts} />
     </>
   );
 }
