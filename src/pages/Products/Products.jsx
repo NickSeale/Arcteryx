@@ -30,9 +30,9 @@ function Products({ trip }) {
     handlePageLoad();
   }, []);
   
-const [findUpperBody, setFindUpperBody]=useState([])
-const [findLowerBody, setFindLowerBody]=useState([])
-const [findAccessorires, setFindAccessories] = useState([])
+const [findUpperBody, setFindUpperBody]=useState([]);
+const [findLowerBody, setFindLowerBody]=useState([]);
+const [findAccessories, setFindAccessories] = useState([]);
   
 
   const handleUpperBodyClick = ()=> {
@@ -44,14 +44,14 @@ const [findAccessorires, setFindAccessories] = useState([])
     
     const handleLowerBodyClick = ()=> {
       // console.log('Clicked Lower')
-        const lookingLower = products.filter((product)=> product.subcategory =="pants" || product.subcategory=="shorts" || product.category =="footware")
+        const lookingLower = products.filter((product)=> product.subcategory =="pants" || product.subcategory=="shorts" || product.category =="footware");
           console.log("pants", lookingLower)
           setFindLowerBody(lookingLower)
       };
  
       const handleAccessoriesClick =()=> {
         // console.log("accessories clickd",)
-        const lookingAcc = products.filter((product)=> product.category=="accessories")
+        const lookingAcc = products.filter((product)=> product.category=="accessories");
         console.log(lookingAcc)
         setFindAccessories(lookingAcc)
       }
@@ -73,7 +73,7 @@ const [findAccessorires, setFindAccessories] = useState([])
           </div>
         </>
       )}
-      <ProductCard findUpperBody={findUpperBody} findLowerBody={findLowerBody} findAccessorires={findAccessorires} productsArray= {products}/>
+      <ProductCard findUpperBody={findUpperBody} findLowerBody={findLowerBody} findAccessories={findAccessories} productsArray= {products}/>
 
       
     </>

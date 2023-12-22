@@ -1,12 +1,8 @@
 //  import productsArray from "../../data/store.json"
  import "../ProductCard/ProductCard.scss"
-function ProductCard ({findUpperBody, findLowerBody, findAccessorires, productsArray}){
+function ProductCard ({findUpperBody, findLowerBody, findAccessories, productsArray}){
 
-    // console.log("data", productsArray)
-    // console.log("upperbody prop", findUpperBody)
-    // console.log("lowerbodyprop", findLowerBody)
-    // console.log("accessories prop", findAccessorires)
-    const products = findUpperBody || findLowerBody ||findAccessorires|| productsArray
+    const products = findUpperBody || findLowerBody|| findAccessories || productsArray;
 
     return (
         <section className="cards">
@@ -15,7 +11,7 @@ function ProductCard ({findUpperBody, findLowerBody, findAccessorires, productsA
             <article className="card" key={product.model}>
             <img className="card__image" src={product.image} alt="" />
             <p className="card__title"> {product.item && product.item.toUpperCase()}</p>
-            <p className="card__oneliner"></p>
+            {/* <p className="card__oneliner"></p> */}
             <p className="card__price">${product.price}</p>
             <button className="card__button" >
             <img
