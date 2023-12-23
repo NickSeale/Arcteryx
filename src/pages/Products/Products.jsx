@@ -8,8 +8,6 @@ import products from "../../data/store.json";
 function Products({ trip }) {
   const WEATHER_API_KEY = "ca56233859af128469af10b8ebed7ea0";
   const WEATHER_BASE_URL = "http://api.openweathermap.org/data/2.5/forecast";
-  const fullURL =
-    "api.openweathermap.org/data/2.5/forecast?lat=24.2&lon=27.4&appid=ca56233859af128469af10b8ebed7ea0";
 
   const [weatherData, setWeatherData] = useState(null);
 

@@ -1,6 +1,6 @@
 import "./App.scss";
 import Home from "./pages/Home/Home";
-import Plan from "./components/Plan/Plan";
+
 import Trip from "./pages/Trip/Trip";
 import Products from "./pages/Products/Products";
 import { useState } from "react";
@@ -11,7 +11,6 @@ function App() {
 
   const handleTripChange = (input) => {
     setTrip(input);
-    // console.log(trip);
   };
   document.body.style = "background: #ffffff;";
 
@@ -26,7 +25,6 @@ function App() {
           }
         />
         <Route path="/products" element={<Products trip={trip} />} />
-        {/* <Route path="/plan" element={<Plan/>}/> */}
       </Routes>
     </BrowserRouter>
   );

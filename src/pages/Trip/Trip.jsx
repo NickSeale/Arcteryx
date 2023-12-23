@@ -8,14 +8,19 @@ import { useState } from "react";
 
 function Trip({ handleTripChange }) {
   const navigate = useNavigate();
+
   const handleHeadingBackClick = () => {
     navigate("/");
   };
   const [search, setSearch] = useState(null);
 
+  const GEO_BASE_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities?";
+  const BASE_POPN = 50000;
+
   const makeUrl = (inputCity) => {
-    return `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=50000&namePrefix=${inputCity}`;
+    return `${GEO_BASE_URL}minPopulation=${BASE_POPN}&namePrefix=${inputCity}`;
   };
+
   document.body.style = "background: #3d3d3d;";
 
   const loadOptions = async (inputCity) => {
@@ -24,11 +29,9 @@ function Trip({ handleTripChange }) {
         ...geoApiOptions,
         url: makeUrl(inputCity),
       });
-      //   console.log(response.data.data);
       return {
         options: response.data.data.map((city) => {
           return {
-            // value: `${city.latitude} ${city.longitude}`,
             lat: city.latitude,
             lon: city.longitude,
             label: `${city.name}${
@@ -80,6 +83,7 @@ function Trip({ handleTripChange }) {
           value={search}
           onChange={handleDestinationChange}
           loadOptions={loadOptions}
+          required
         />
         <select
           className="trip__option"
