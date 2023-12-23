@@ -101,14 +101,7 @@ function ProductsHeader({
           >
             ACCESSORIES
           </h4>
-          {/* <h4 className="header__text">FOOTWARE</h4> */}
-          {/* <h4 className="header__text">PACKS</h4> */}
-          <h4
-            //   onClick={handleOnTripClick}
-            className="header__text"
-          >
-            PLAN YOUR TRIP
-          </h4>
+          <h4 className="header__text">PLAN YOUR TRIP</h4>
         </section>
       </section>
       <section className="header__content">
@@ -129,7 +122,6 @@ function ProductsHeader({
           <img
             className="header__icon--flag"
             src="./assets/canada.png"
-            // src="https://images-dynamic-arcteryx.imgix.net/foundation-ui/svgs/Cart.svg"
             alt="Flag"
           />
         </section>
